@@ -1,37 +1,31 @@
-## Welcome to GitHub Pages
+## 理财投资类
+- &nbsp;&nbsp;[理论类](#theory)
 
-You can use the [editor on GitHub](https://github.com/minglightshow/minglightshow.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+- &nbsp;&nbsp;[实践类](#practise)  
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
 
-1. Numbered
-2. List
 
-**Bold** and _Italic_ and `Code` text
 
-[Link](url) and ![Image](src)
-```
+### <span id="theory">理论类</span>  
+- &nbsp;&nbsp;[读《巴比伦最富有的人》总结](2018/babylon.md)  
+- &nbsp;&nbsp;[读《财务自由之路》总结](2018/financial-freedom.md)  
+- &nbsp;&nbsp;[读《从零开始学理财》总结](2018/learn-financial.md)  
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-### Jekyll Themes
+### <span id="practise">实践类</span>  
+- &nbsp;&nbsp;[读《不上班，也有钱》有感](2018/donotjob-money.md)  
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/minglightshow/minglightshow.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
-### Support or Contact
+## 思维模型   
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+- &nbsp;&nbsp;[读《贫穷的本质》总结](2018/poor-people.md)
+
+
+## 李翔知识内参  
+
+- &nbsp;&nbsp;[提升人格魅力的四种方法](2018/improve-charm.md)

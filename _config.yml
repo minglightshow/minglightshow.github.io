@@ -1,1 +1,7 @@
+title: Ming Blog
+description: 读书笔记
 theme: jekyll-theme-architect
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+show_downloads: true
+google_analytics:

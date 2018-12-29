@@ -1,0 +1,39 @@
+#toTop {
+    display: none;
+    position: fixed; /* 固定定位 */
+    right: 10px;
+    bottom: 30px;
+    background-color: #e6e6e6;
+    height: 40px;
+    line-height: 40px;
+    width: 40px;
+    transition: all .4s ease .1s;
+}
+#toTop:hover { background-color: #b7b7b7; }
+#toTop span {
+    position: relative; /* 相对定位，以便其伪元素绝对定位 */
+    top: 5px;
+    left: 15px; /* 变换为顺时针旋转 30°，通过数学角度计算后适当调整位置 */
+    display: inline-block;
+    width: 3px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 3px;
+    -webkit-transform: rotate(30deg);
+        -ms-transform: rotate(30deg);
+            transform: rotate(30deg);
+}
+#toTop span:after {
+    content: "";
+    position: absolute; /* 伪元素中是相对于 #toTop span 绝对定位 */
+    top: -5px;
+    left: 8px;
+    display: inline-block;
+    width: 3px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 3px;
+    -webkit-transform: rotate(-60deg);
+        -ms-transform: rotate(-60deg);
+            transform: rotate(-60deg);
+}
