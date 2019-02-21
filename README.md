@@ -6,7 +6,8 @@
 
 ### 自我管理工具
 - <a href="https://www.wunderlist.com" target="_blank">奇妙清单</a>  
-
+- <a href="http://jbt.github.io/markdown-editor/" target="_blank">Markdown Editor</a>  
+- <a href="http://dillinger.io/" target="_blank">Markdown Editor</a>  
 
 
 
