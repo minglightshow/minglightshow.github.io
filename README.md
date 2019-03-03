@@ -10,7 +10,10 @@
 - <a href="http://dillinger.io/" target="_blank">Markdown Editor</a>  
 
 ### 网址导航  
-- [理财工具](2019/web-guide.md)
+- [理财工具](2019/web-guide.md)  
+- <a href="https://www.51job.com/" target="_blank">前程无忧</a>  
+- <a href="http://www.jobshow.cn/" target="_blank">求职秀</a>  
+
 
 
 
