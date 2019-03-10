@@ -78,3 +78,6 @@ change. Journal of clinical psychology, 67(2), 143-154.
 Prochaska, J., & Norcross, J. (2010). Systems of psychotherapy: A
 
 transtheoretical analysis. Nelson Education.
+
+
+- <a href="http://www.sohu.com/a/128854021_651254" type="text/html" target="_blank">原文</a>  
