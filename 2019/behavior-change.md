@@ -1,3 +1,10 @@
+<style type="text/css">
+mark {
+    background-color: yellow;
+    color: black;
+}
+</style>
+
 ### “只有20%的来访者准备好了改变” | 来访者行为改变的5个阶段  
 
 ![image](img\346fc.jpeg)  
