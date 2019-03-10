@@ -35,3 +35,7 @@
 ## 李翔知识内参  
 
 - &nbsp;&nbsp;[提升人格魅力的四种方法](2018/improve-charm.md)
+
+## 行为改变
+
+- &nbsp;&nbsp;[“只有20%的来访者准备好了改变” | 来访者行为改变的5个阶段  ](2019/behavior-change.md)
