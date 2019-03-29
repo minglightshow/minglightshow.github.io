@@ -45,4 +45,4 @@
 
 ### 人脉与社交管理总结  
 
-- &nbsp;&nbsp;[人脉](2019/connections.md)
+- &nbsp;&nbsp;[人脉与社交管理总结](2019/connections.md)
