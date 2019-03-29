@@ -28,6 +28,7 @@
 ### <span id="practise">实践类</span>  
 - &nbsp;&nbsp;[读《不上班，也有钱》有感](2018/donotjob-money.md)  
 - [巨人的工具](2019/Goliath's-tool.md)  
+- [如何学习Pro版](2019/howtolearn-pro.md)  
 
 
 ## 思维模型   
