@@ -29,6 +29,7 @@
 - &nbsp;&nbsp;[读《不上班，也有钱》有感](2018/donotjob-money.md)  
 - [巨人的工具](2019/Goliath's-tool.md)  
 - [如何学习Pro版](2019/howtolearn-pro.md)  
+- <a href="http://yetanmoney.com/invest-app/" target="_blank">推荐四款我一直常备的基金 App</a>  
 
 
 ## 思维模型   
