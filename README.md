@@ -50,5 +50,6 @@
 
 - &nbsp;&nbsp;[人脉与社交管理总结](2019/connections.md)
 
+### 数学
 
 - &nbsp;&nbsp;[充分条件，必要条件，充要条件的定义](2019/sufficient-condition.md)
