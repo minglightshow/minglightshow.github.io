@@ -53,3 +53,7 @@
 ### 数学
 
 - &nbsp;&nbsp;[充分条件，必要条件，充要条件的定义](2019/sufficient-condition.md)
+
+
+https://www.jncddc.com/
+https://jingyan.baidu.com/article/e5c39bf57b19a739d76033ed.html
