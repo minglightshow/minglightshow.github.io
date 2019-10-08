@@ -14,8 +14,8 @@ table, td, th {
 <th colspan="2">损益表</th>
 </thead>
 <tr>
-<th >收入</th>
-<th >现金流</th>
+<th style="width:50%;">收入</th>
+<th style="width:50%;">现金流</th>
 </tr>
 <tr>
 <td>工资收入</td>
