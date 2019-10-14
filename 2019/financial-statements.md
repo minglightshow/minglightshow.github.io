@@ -10,7 +10,7 @@ th{
   font-weight: bold;
 }
 table tr:nth-child(odd){
-background: #ccc;
+  background: #ccc;
 }
 </style>
 <table>
