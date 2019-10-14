@@ -6,8 +6,9 @@ table {
 table, td, th {
     border: 1px solid black;
 }
-	.bk{
-	}
+th{
+  font-weight: bold;
+}
 </style>
 <table>
 <thead>
