@@ -9,7 +9,8 @@ table, td, th {
 th{
   font-weight: bold;
 }
-table tr:nth-child(odd){
+/*odd*/
+table tr:nth-child(even){
   background: #ccc;
 }
 </style>
