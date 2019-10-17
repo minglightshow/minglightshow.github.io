@@ -29,7 +29,7 @@ table tr:nth-child(even){
 <span class="mark">常识性才是最贵的</span>。
 </li>
 <li>
-<span class="mark">失败不是成功之母，成功才是成功之母</span>。
+失败不是成功之母，<span class="mark">成功才是成功之母</span>。
 </li>
 </ul>
 
