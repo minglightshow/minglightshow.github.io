@@ -13,6 +13,11 @@ table, td, th {
 #assets tr:nth-child(even){
   background: #ccc;
 }
+
+.trbgcolor{
+background: #ccc;
+}
+
 .mark{
     color:#aa0000;
 }
@@ -43,7 +48,7 @@ table, td, th {
 <thead>
 <th colspan="2">损益表</th>
 </thead>
-<tr>
+<tr class="trbgcolor">
 <th style="width:50%;">收入</th>
 <th style="width:50%;">现金流</th>
 </tr>
@@ -55,7 +60,7 @@ table, td, th {
 <td>合计</td>
 <td>7100</td>
 </tr>
-<tr>
+<tr class="trbgcolor">
 <th>支出</th>
 <th>现金流</th>
 </tr>
