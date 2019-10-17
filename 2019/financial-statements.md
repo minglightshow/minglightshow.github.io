@@ -45,7 +45,7 @@ background: #ccc;
 </ul>
 
 <table>
-<thead>
+<thead class="trbgcolor">
 <th colspan="2">损益表</th>
 </thead>
 <tr class="trbgcolor">
