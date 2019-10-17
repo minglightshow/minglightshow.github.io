@@ -34,6 +34,9 @@ table tr:nth-child(even){
 <li>
 成功反义词不是失败，<span class="mark">而是平庸</span>。
 </li>
+<li>
+从学校毕业后，<span class="mark">个人财务报表</span>（资产负债表，损益表/利润表）就是你的成绩单。
+</li>
 </ul>
 
 <table>
