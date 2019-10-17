@@ -10,7 +10,7 @@ table, td, th {
   font-weight: bold;
 }
 /*odd*/
-table tr:nth-child(even){
+#assets tr:nth-child(even){
   background: #ccc;
 }
 .mark{
@@ -82,7 +82,7 @@ table tr:nth-child(even){
 
 <br>
 
-<table>
+<table id="assets">
 <thead>
 <th colspan="5">资产负债表</th>
 </thead>
