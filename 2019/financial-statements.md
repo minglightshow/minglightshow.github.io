@@ -23,7 +23,7 @@ table tr:nth-child(even){
 </li>
 <li>要想拥有财富，就要让自己<span class="mark">配得上它</span>。
 </li>
-<li>常识性的东西才是最贵的东西。
+<li><span class="mark">常识性才是最贵的</span>。
 </li>
 </ul>
 
