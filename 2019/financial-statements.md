@@ -73,13 +73,6 @@ table tr:nth-child(even){
 <td>金额</td>
 </tr>
 <tr>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
 <td>基金</td>
 <td>数量</td>
 <td>成本</td>
