@@ -72,10 +72,10 @@ table tr:nth-child(even){
 <td ></td>
 </tr>
 <tr>
-<td colspan="2">利息+分红+房地产+公司的现金流</td>
+<td colspan="2">被动收入=利息+分红+房地产+公司的现金流</td>
 </tr>
 <tr>
-<td>总收入</td>
+<td>月现金流</td>
 <td ></td>
 </tr>
 </table>
