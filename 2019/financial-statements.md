@@ -18,7 +18,7 @@ table, td, th {
 background: #ccc;
 }
 .fontsize{
-font-size:60px;
+font-size:40px;
 }
 .mark{
     color:#aa0000;
@@ -75,7 +75,7 @@ font-size:60px;
 <td>7100</td>
 </tr>
 <tr>
-<td colspan="2" class="fontbold"><span class="fontsize">收入总计</span></td>
+<td colspan="2" class="fontbold"><span class="">收入总计</span></td>
 </tr>
 <tr>
 <td class="fontbold">被动收入=</td>
