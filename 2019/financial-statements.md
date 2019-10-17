@@ -19,11 +19,17 @@ table tr:nth-child(even){
 </style>
 
 <ul>
-<li>风险无处不在，所以别想着远离风险，而是要学会<span class="mark">管控风险</span>。
+<li>
+风险无处不在，所以别想着远离风险，而是要学会<span class="mark">管控风险</span>。
 </li>
-<li>要想拥有财富，就要让自己<span class="mark">配得上它</span>。
+<li>
+要想拥有财富，就要让自己<span class="mark">配得上它</span>。
 </li>
-<li><span class="mark">常识性才是最贵的</span>。
+<li>
+<span class="mark">常识性才是最贵的</span>。
+</li>
+<li>
+<span class="mark">失败不是成功之母，成功才是成功之母</span>。
 </li>
 </ul>
 
