@@ -31,6 +31,9 @@ table tr:nth-child(even){
 <li>
 失败不是成功之母，<span class="mark">成功才是成功之母</span>。
 </li>
+<li>
+成功反义词不是失败，<span class="mark">而是平庸</span>。
+</li>
 </ul>
 
 <table>
