@@ -73,14 +73,14 @@ background: #ccc;
 <td>7100</td>
 </tr>
 <tr>
-<td>被动收入=</td>
+<td class="fontbold">被动收入=</td>
 <td ></td>
 </tr>
 <tr>
 <td colspan="2" class="fontbold">被动收入=利息+分红+房地产+公司的现金流</td>
 </tr>
 <tr>
-<td>月现金流</td>
+<td class="fontbold">月现金流</td>
 <td ></td>
 </tr>
 </table>
