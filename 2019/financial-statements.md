@@ -14,6 +14,24 @@ table tr:nth-child(even){
   background: #ccc;
 }
 </style>
+
+<ul>
+<li>风险无处不在，所以别想着远离风险，而是要学会<span class="mark">管控风险</span>。
+</li>
+<li>要想拥有财富，就要让自己<span class="mark">配得上它</span>。
+</li>
+<li>常识性的东西才是最贵的东西。
+</li>
+</ul>
+<ul>
+<li>风险无处不在，所以别想着远离风险，而是要学会<span class="mark">管控风险</span>。
+</li>
+<li>要想拥有财富，就要让自己<span class="mark">配得上它</span>。
+</li>
+<li>常识性的东西才是最贵的东西。
+</li>
+</ul>
+
 <table>
 <thead>
 <th colspan="2">损益表</th>
