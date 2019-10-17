@@ -6,12 +6,15 @@ table {
 table, td, th {
     border: 1px solid black;
 }
-th{
+.mark,th{
   font-weight: bold;
 }
 /*odd*/
 table tr:nth-child(even){
   background: #ccc;
+}
+.mark{
+    color:#aa0000;
 }
 </style>
 
