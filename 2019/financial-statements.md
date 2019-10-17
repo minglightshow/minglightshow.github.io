@@ -6,7 +6,7 @@ table {
 table, td, th {
     border: 1px solid black;
 }
-.mark,th{
+.fontbold,.mark,th{
   font-weight: bold;
 }
 /*even*/
@@ -77,7 +77,7 @@ background: #ccc;
 <td ></td>
 </tr>
 <tr>
-<td colspan="2">被动收入=利息+分红+房地产+公司的现金流</td>
+<td colspan="2" class="fontbold">被动收入=利息+分红+房地产+公司的现金流</td>
 </tr>
 <tr>
 <td>月现金流</td>
