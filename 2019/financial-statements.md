@@ -141,4 +141,4 @@ table tr:nth-child(even){
 </tr>
 </table>
 
-<img src="img/684040dd769e5.jpg"></img>
+<img src="img/684040dd769e5.jpg">
