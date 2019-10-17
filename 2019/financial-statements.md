@@ -3,8 +3,9 @@ table {
     border-collapse: collapse;
 }
 
-table, td, th {
+table, td, th,thead {
     border: 1px solid black;
+	text-align:center;
 }
 .fontbold,.mark,th{
   font-weight: bold;
