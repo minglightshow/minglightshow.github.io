@@ -6,6 +6,7 @@
 - <a href="http://www.jrj.com.cn/" target="_blank">金融界</a>  
 - <a href="https://finance.sina.com.cn/stock/" target="_blank">新浪财经</a>  
 - <a href="http://www.stcn.com/" target="_blank">证券时报</a>  
+- <a href="https://www.howbuy.com/" target="_blank">掌上基金</a>  
   
   
 - <a href="https://qieman.com/idx-eval" target="_blank">且慢每日估值</a>  
