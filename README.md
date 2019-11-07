@@ -15,6 +15,8 @@
 - <a href="http://jbt.github.io/markdown-editor/" target="_blank">Markdown Editor</a>  
 - <a href="http://dillinger.io/" target="_blank">Markdown Editor</a>  
 - [个人财务报表模板](2019/financial-statements.md)  
+- [名言录](2019/Memorable-Quotes.md)  
+
 
 ### 网址导航  
 - [理财工具](2019/web-guide.md)  
