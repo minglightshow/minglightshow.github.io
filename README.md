@@ -22,6 +22,7 @@
 - [理财工具](2019/web-guide.md)  
 - <a href="https://www.51job.com/" target="_blank">前程无忧</a>  
 - <a href="http://www.jobshow.cn/" target="_blank">求职秀</a>  
+- <a href="https://www.zhipin.com/suzhou/" target="_blank">BOSS直聘</a>  
 - <a href="https://aipage.bce.baidu.com/" target="_blank">智能建站和小程序</a>  
 - <a href="http://naotu.baidu.com/home" target="_blank">绘制脑图</a>  
 
