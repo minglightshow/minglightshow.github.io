@@ -88,6 +88,8 @@ font-size:40px;
 <tr>
 <td class="fontbold">月现金流</td>
 <td ></td>
+</tr><tr>
+<td colspan="2" class="fontbold">月现金流=总收入-总支出</td>
 </tr>
 </table>
 
