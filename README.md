@@ -12,15 +12,17 @@
 
 ### 自我管理工具
 - <a href="https://www.wunderlist.com" target="_blank">奇妙清单</a>  
-- <a href="http://jbt.github.io/markdown-editor/" target="_blank">Markdown Editor</a>  
-- <a href="http://dillinger.io/" target="_blank">Markdown Editor</a>  
 - [个人财务报表模板](2019/financial-statements.md)  
 - [名言录](2019/Memorable-Quotes.md)  
 
-### 博客工具  
+### Markdown客户端写作工具
+- <a href="https://www.typora.io/" target="_blank">typora</a>  
+- <a href="https://github.com/cloose/CuteMarkEd" target="_blank">CuteMarkEd</a>  
+
+### 博客写作平台  
 - <a href="http://blog.sina.com.cn/" target="_blank">新浪博客（非技术类）</a>  
-- <a href="https://blog.csdn.net/ftm_csdn" target="_blank">CSDN（编程技术类）</a>  
 - <a href="https://weibo.com/" target="_blank">新浪微博（日记类）</a>  
+- <a href="https://blog.csdn.net/ftm_csdn" target="_blank">CSDN（编程技术类）</a>  
 
 ### 网址导航  
 - [理财工具](2019/web-guide.md)  
