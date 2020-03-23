@@ -14,6 +14,8 @@
 - <a href="https://www.wunderlist.com" target="_blank">奇妙清单</a>  
 - [个人财务报表模板](2019/financial-statements.md)  
 - [名言录](2019/Memorable-Quotes.md)  
+- [加仓金额计算](2019/Memorable-Quotes.md)  
+
 
 ### Markdown客户端写作工具
 - <a href="https://www.typora.io/" target="_blank">typora</a>  

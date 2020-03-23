@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0, user-scalable=no">
+<title>加仓金额计算</title>
+<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+<!--https://blog.csdn.net/weixin_33887443/article/details/92392411-->
+<script type="text/javascript" src="math.js"></script>
+<script type="text/javascript">
+function calculate(){
+    var curIndex=Number($.trim($("#curIndex").val()));//当前点数
+    var curAssets=Number($.trim($("#curAssets").val()));//当前资产
+    var amountAdded=Number($.trim($("#amountAdded").val()));//加仓金额
+    var curIncome=Number($.trim($("#curIncome").val()));//当前收益
+    var result=$("#result").val();//结果
+
+    //当前点数-（当前点数/(当前资产+加仓金额)*当前收益）
+    //result=curIndex-(curIndex/(curAssets+amountAdded)*curIncome);
+
+    //math.divide,add,subtract,multiply
+    var totalAssets = math.chain(math.bignumber(curAssets)).add(math.bignumber(amountAdded)).done();
+    var indexIncome = math.chain(math.bignumber(curIndex)).divide(math.bignumber(totalAssets)).multiply(math.bignumber(curIncome)).done();
+    console.log(indexIncome);
+    result = math.chain(math.bignumber(curIndex)).subtract(math.bignumber(indexIncome)).done();
+    //console.log(result);
+    $("#result").val(result);
+}
+
+</script>
+<style type="text/css">
+/*table {
+    border-collapse: collapse;
+}
+
+table, td, th {
+    border: 1px solid black;
+}
+*/
+.button {
+    color: #666;
+    background-color: #EEE;
+    border-color: #EEE;
+    font-weight: 300;
+    font-size: 16px;
+    font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    text-decoration: none;
+    text-align: center;
+    line-height: 40px;
+    height: 40px;
+    padding: 0 40px;
+    margin: 0;
+    display: inline-block;
+    appearance: none;
+    cursor: pointer;
+    border: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: .3s;
+    transition-duration: .3s;
+}
+.button-primary{
+    background-color: #1B9AF7;
+    border-color: #1B9AF7;
+    color: #FFF;
+}
+.button-box {
+    border-radius: 10px;
+}
+
+.textalign{
+  text-align:center;
+}
+</style>
+</head>
+<body>
+计算加仓后，相当于相应指数的成本。<br><br>
+当前点数-（当前点数/(当前资产+加仓金额)<br>*当前收益）<br><br>
+
+  <table>
+    <tr>
+      <td>当前点数</td>
+      <td><input id="curIndex" type="text" name="curIndex" value=""></td>
+    </tr>
+    <tr>
+      <td>当前资产</td>
+      <td><input id="curAssets" type="text" name="curAssets" value=""></td>
+    </tr>
+    <tr>
+      <td>加仓金额</td>
+      <td><input id="amountAdded" type="text" name="amountAdded" value=""></td>
+    </tr>
+    <tr>
+      <td>当前收益</td>
+      <td><input id="curIncome" type="text" name="curIncome" value=""></td>
+    </tr>
+    <tr>
+      <td colspan="2" class="textalign">
+        加仓后相当于在该点位买入:
+      </td>
+    </tr>
+    <tr>
+       <td colspan="2" class="textalign">
+       <input id="result" type="text" name="result" value="">
+       </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td colspan="0">
+        <button id="calculation" type="button" name="button" class="button button-primary button-box" onclick="calculate()">提交</button>
+      </td>
+    </tr>
+  </table>
+<br>
+
+
+</body>
+</html>
