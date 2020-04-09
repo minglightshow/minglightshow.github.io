@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>WEB前端canvas雨滴特效</title>
+<meta name="description" content="免费在线教程">
+<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+<meta name="author" content="runoob">
+
+<style media="screen" type="text/css">
+  html,body{
+    overflow: hidden;
+    margin:0;
+  }
+  /**装饰元素的属性*/
+  canvas{
+
+    background-color:#000;
+    display:block;
+  }
+  .rain{
+
+  }
+</style>
+<script type="text/javascript" src="../js/jquery-3.4.1.js"></script>
+<script type="text/javascript" src="../js/lodash.js"></script>
+<script type="text/javascript" src="canvasrain.js"></script>
+
+</head>
+<body>
+<!--
+   教学视频网址：https://www.bilibili.com/video/BV1UW41157Xp
+   源码参考网址：http://www.jq22.com/webqd1750
+-->
+<canvas id='rain' class='rain'></canvas>
+
+<script type="text/javascript">
+  var bg = factory.getGB()
+  bg.init();
+
+  factory.createRain(30);
+/*
+  var sT = setInterval(function(){
+    var rainArray = factory.getRainArray();
+
+    for (var i = 0; i < rainArray.length; i++) {
+        var item = rainArray[i];
+        item.move();
+
+    }
+  },1000/60);
+*/
+
+function move(){
+  var rainArray = factory.getRainArray();
+
+  bg.refreshBG();
+
+  for (var i = 0; i < rainArray.length; i++) {
+      var item = rainArray[i];
+      item.move();
+  }
+  window.requestAnimationFrame(move);
+}
+
+
+  ~~function(){
+      move();
+  }();
+
+
+</script>
+</body>
+</html>
