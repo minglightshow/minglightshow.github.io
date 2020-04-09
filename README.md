@@ -25,7 +25,7 @@
 - <a href="http://blog.sina.com.cn/" target="_blank">新浪博客（非技术类）</a>  
 - <a href="https://weibo.com/" target="_blank">新浪微博（日记类）</a>  
 - <a href="https://blog.csdn.net/ftm_csdn" target="_blank">CSDN（编程技术类）</a>  
-- <a href="https://mp.weixin.qq.com/" target="_blank">微信公众平台</a> 
+- <a href="https://mp.weixin.qq.com/" target="_blank">微信公众平台</a>
 
 ### 网址导航  
 - [理财工具](2019/web-guide.md)  
@@ -78,6 +78,8 @@
 
 ### webArt
 - [雨滴特效](webArt/canvasrain/index.html)
+- [樱花雨](webArt/cherry/cherry.html)
+- [雪花](webArt/snow/snow.html)
 <!--
 https://www.jncddc.com/
 
