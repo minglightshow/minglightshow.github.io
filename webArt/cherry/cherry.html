@@ -35,12 +35,11 @@ html, body{
 //封装函数让谷歌浏览器自动播放
 function play() {
 	var music = document.getElementById("music");//判断如果音乐停止播放中，就让他播放。。。
-  console.dir(music.paused);
+  
 	if (music.paused) {
 		music.paused = false;
 		music.play();
 	}
-  console.dir(music);
 }
 　　　//调用函数
 setTimeout(function(){play()}, 500);
