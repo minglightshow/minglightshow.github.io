@@ -23,10 +23,36 @@ html, body{
 }</style>
 </head>
 <body>
+<!--
 <iframe style="display:none;" frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=86 src="https://music.163.com/outchain/player?type=2&id=22707931&auto=1&height=66"></iframe>
+-->
+<audio controls loop id="music">
+  <source src="spring.mp3" type="audio/mpeg">
+</audio>
 <div id="jsi-cherry-container" class="container"></div>
 
-<script>
+<script type="text/javascript">
+//封装函数让谷歌浏览器自动播放
+function play() {
+	var music = document.getElementById("music");//判断如果音乐停止播放中，就让他播放。。。
+  console.dir(music.paused);
+	if (music.paused) {
+		music.paused = false;
+		music.play();
+	}
+  console.dir(music);
+}
+　　　//调用函数
+setTimeout(function(){play()}, 500);
+
+~~function(){
+
+}()
+
+</script>
+
+<script type="text/javascript">
+
 var RENDERER = {
 	INIT_CHERRY_BLOSSOM_COUNT : 30,
 	MAX_ADDING_INTERVAL : 10,
