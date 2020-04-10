@@ -23,9 +23,6 @@ html, body{
 }</style>
 </head>
 <body>
-<!--
-<iframe style="display:none;" frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=86 src="https://music.163.com/outchain/player?type=2&id=22707931&auto=1&height=66"></iframe>
--->
 <audio controls loop id="music" style="display:none;">
   <source src="spring.mp3" type="audio/mpeg">
 </audio>
@@ -35,14 +32,16 @@ html, body{
 //封装函数让谷歌浏览器自动播放
 function play() {
 	var music = document.getElementById("music");//判断如果音乐停止播放中，就让他播放。。。
-  
+  music.volume=1;
+  music.muted = false;
+
 	if (music.paused) {
 		music.paused = false;
 		music.play();
 	}
 }
 　　　//调用函数
-setTimeout(function(){play()}, 500);
+setTimeout(function(){play()}, 1000);
 
 ~~function(){
 
