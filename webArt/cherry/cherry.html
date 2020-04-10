@@ -29,19 +29,35 @@ html, body{
 <div id="jsi-cherry-container" class="container"></div>
 
 <script type="text/javascript">
+var sT = null ,sI = null;
+
 //封装函数让谷歌浏览器自动播放
 function play() {
 	var music = document.getElementById("music");//判断如果音乐停止播放中，就让他播放。。。
+
   music.volume=1;
   music.muted = false;
 
 	if (music.paused) {
+    music.muted = false;
 		music.paused = false;
 		music.play();
+    //https://www.codercto.com/a/16332.html
 	}
+
+  if(!music.paused){
+    clearTimeout(sT);
+    clearInterval(sI);
+  }
 }
+
 　　　//调用函数
-setInterval(function(){play()}, 2000);
+//调用函数
+sT = setTimeout(function(){
+  sI = setInterval(function(){
+       play();
+       },3000);
+}, 3000);
 
 ~~function(){
 
