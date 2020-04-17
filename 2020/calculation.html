@@ -7,6 +7,7 @@
 <script type="text/javascript" src="../script/jquery-3.4.1.min.js"></script>
 <!--https://blog.csdn.net/weixin_33887443/article/details/92392411-->
 <script type="text/javascript" src="../script/math.js"></script>
+<script type="text/javascript" src="../script/lodash.js"></script>
 <script type="text/javascript">
 function calculate(){
     var curIndex=Number($.trim($("#curIndex").val()));//当前点数
@@ -24,7 +25,7 @@ function calculate(){
     console.log(indexIncome);
     result = math.chain(math.bignumber(curIndex)).subtract(math.bignumber(indexIncome)).done();
     //console.log(result);
-    $("#result").val(result);
+    $("#result").val(_.round(result, 2));
 }
 
 </script>
