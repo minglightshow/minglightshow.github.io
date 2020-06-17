@@ -119,12 +119,17 @@ var colorArray=['rgb(255,21,0)','rgb(235,97,0)','rgb(243,152,0)',
       data: dataList
    }];
 
+      var credits = [{
+       enabled: false
+      }];
+
    var json = {};
    json.chart = chart;
    json.title = title;
    json.tooltip = tooltip;
    json.series = series;
    json.plotOptions = plotOptions;
+   json.credits = credits;
    $('#container').highcharts(json);
 
 
