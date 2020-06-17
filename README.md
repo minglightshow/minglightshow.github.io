@@ -15,6 +15,7 @@
 - [个人财务报表模板](2019/financial-statements.md)  
 - [名言录](2019/Memorable-Quotes.md)  
 - [加仓金额计算](2020/calculation.html)  
+- [颜色搭配自动选择器](2020/sehuan/sehuan.html)  
 
 
 ### Markdown客户端写作工具
