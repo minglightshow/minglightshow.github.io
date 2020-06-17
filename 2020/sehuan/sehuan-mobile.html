@@ -99,7 +99,8 @@ var colorArray=['rgb(255,21,0)','rgb(235,97,0)','rgb(243,152,0)',
               }
 
               var complementaryColor = getColorByRange(nextRange);
-              $('#complementaryColor1').css("background-color",complementaryColor);
+              $('#complementaryColor1').css("background-color",event.point.color);
+              $('#complementaryColor2').css("background-color",complementaryColor);
 
               //对比色
               console.log(colorObjArray);
@@ -277,6 +278,7 @@ function getContrastingColorsByRangeCalcu(range){
   <tr>
     <th class='thStyle'>1</th>
     <td id='complementaryColor1' class='tdheight'></td>
+    <td id='complementaryColor2' class='tdheight'></td>
   </tr>
 </table>
 
