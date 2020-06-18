@@ -1,150 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0, user-scalable=no">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>js色卡</title>
-    <style type="text/css">
-        .box { border: 1px solid rgba(0,0,0,0.2); width: auto; margin-top: 20px;}
-        /*.list {width: 330px;display: flex;}
-        .item {height: 30px;flex: 1;}*/
-        input {width: 30px;}
-    </style>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0, user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>
+			js色卡
+		</title>
+		<style type="text/css">
 
-    <script type="text/javascript" src="../../script/jquery-3.4.1.min.js"></script>
-    <script type="text/javascript">
-    $(function(){
-      var boxwidth = $('div.box').css('width');
-      var numboxwidth = boxwidth.replace('px','');
-      console.log(numboxwidth);
-      var numItem = numboxwidth/11;
-      $('h1').before('<style type="text/css">.list {width: '+boxwidth+';display: flex;}.item {height: '+numItem+'px;flex: 1;}</style>');
-    })
-    </script>
-</head>
-<body>
-    <h1>js色卡</h1>
-    <p>要求：色卡左上角为白色，左下角为黑色，右上角为输入的颜色，右下角亮度为0输入颜色。</p>
-    <div class="form">
-        RGB-->
-        R：<input type="number" id="R">
-        G：<input type="number" id="G">
-        B：<input type="number" id="B">
-        <input type="button" value="GO" id="rgbGo"> <br/><br/>
-        HSV-->
-        H：<input type="number" value="240" id="H">
-        S：<input type="number" value="100" id="S">
-        V(B)：<input type="number" value="60" id="V">
-        <input type="button" value="GO" id="hsvGo">
-    </div>
-    <div id="box" class="box"></div>
-    <script type="text/javascript">
-        $(function () {
-            var dom = $('#box')
-            $('#rgbGo').click(function () {
-                var R = $('#R').val() || 0
-                var G = $('#G').val() || 0
-                var B = $('#B').val() || 0
-                var hsv = rgbToHsv([R, G, B])
-                initHtml(hsv);
-            })
-            $('#hsvGo').click(function () {
-                var H = $('#H').val() || 0
-                var S = $('#S').val() || 0
-                var V = $('#V').val() || 0
-                initHtml([H, S, V]);
-            })
-            initHtml([240, 100, 60]);
-            function initHtml(arr) {
-                var h = arr[0],
-                    s = arr[1],
-                    v = arr[2];
-                var colors = createColorList(h, s, v);
-                var domHtml = createHtml(colors);
-                dom.html($(domHtml));
-            }
-            function createHtml(colors) {
-                var html = '';
-                for (var i = 0, l = colors.length; i < l; i++) {
-                    html += '<div class="list">'
-                    for (var x = 0, n = colors[i].length; x < n; x++) {
-                        html += '<div class="item" style="background:' + colors[i][x] + '"></div>'
-                    }
-                    html += '</div>'
-                }
-                return html;
-            }
-            //生成11*11的二维数组（颜色）要求：色卡左上角为白色，左下角为黑色，右上角为输入的颜色，右下角亮度为0输入颜色
-            function createColorList(h, n, m) {
-                var list = [];
-                for (var i = 0; i <= 10; i++) {
-                    for (var y = 0; y <= 10; y++) {
-                        if (y === 0) {
-                            list[i] = [];
-                        }
-                        var s = y * (n / 10);
-                        var l = 100 - (i * 10);
-                        var _m = m - (m / 10 * i);
-                        l = l - (y * ((l - _m) / 10));
-                        var color = hsvToRgb([h, s / 100, l / 100]);
-                        var item = 'rgb(' + color[0] + ',' + color[1] + ',' + color[2] + ')'
-                        list[i].push(item)
-                    }
-                }
-                return list;
-            }
-            //hsv颜色转rgb颜色
-            function hsvToRgb(arr) {
-                var h = arr[0], s = arr[1], v = arr[2];
-                var r = 0, g = 0, b = 0;
-                var i = parseInt((h / 60) % 6);
-                var f = h / 60 - i;
-                var p = v * (1 - s);
-                var q = v * (1 - f * s);
-                var t = v * (1 - (1 - f) * s);
-                switch (i) {
-                    case 0: r = v; g = t; b = p; break;
-                    case 1: r = q; g = v; b = p; break;
-                    case 2: r = p; g = v; b = t; break;
-                    case 3: r = p; g = q; b = v; break;
-                    case 4: r = t; g = p; b = v; break;
-                    case 5: r = v; g = p; b = q; break;
-                    default: break;
-                }
-                r = parseInt(r * 255.0)
-                g = parseInt(g * 255.0)
-                b = parseInt(b * 255.0)
-                return [r, g, b];
-            }
-            //rgb颜色转hsv颜色
-            function rgbToHsv(arr) {
-                var h = 0, s = 0, v = 0;
-                var r = arr[0], g = arr[1], b = arr[2];
-                arr.sort(function (a, b) {
-                    return a - b;
-                })
-                var max = arr[2]
-                var min = arr[0];
-                v = max / 255;
-                s = max === 0 ? 0 : 1 - (min / max);
-                if (max === min) {
-                    h = 0; //事实上，max===min的时候，h无论为多少都无所谓
-                } else if (max === r && g >= b) {
-                    h = 60 * ((g - b) / (max - min)) + 0;
-                } else if (max === r && g < b) {
-                    h = 60 * ((g - b) / (max - min)) + 360
-                } else if (max === g) {
-                    h = 60 * ((b - r) / (max - min)) + 120
-                } else if (max === b) {
-                    h = 60 * ((r - g) / (max - min)) + 240
-                }
-                h = parseInt(h);
-                s = parseInt(s * 100);
-                v = parseInt(v * 100);
-                return [h, s, v]
-            }
-        })
-    </script>
-</body>
+    /*
+    */
+    @media screen and (max-width:768px) {
+    	input {
+    	 width:35px;
+      }
+      .box {
+       	border:1px solid rgba(0,0,0,0.2);
+       	width:auto;
+       	margin-top:20px;
+      }
+    }
+    @media	screen and (min-width:768px) {
+    	input {
+    	width:35px;
+      }
+      .box {
+       	border:1px solid rgba(0,0,0,0.2);
+       	width:auto;
+       	margin-top:20px;
+      }
+    }
+    @media screen and (min-width:1024px) {
+    	input {
+    	  width:40px;
+      }
+      .box {
+       	border:1px solid rgba(0,0,0,0.2);
+       	width:330px;
+       	margin-top:20px;
+      }
+      .list {
+      	width:330px;
+      	display:flex;
+      }
+      .item {
+      	height:30px;
+      	flex:1;
+      }
+    }
+    @media screen and (min-width:1200px) {
+    	input {
+    	  width:40px;
+      }
+      .box {
+       	border:1px solid rgba(0,0,0,0.2);
+       	width:330px;
+       	margin-top:20px;
+      }
+      .list {
+      	width:330px;
+      	display:flex;
+      }
+      .item {
+      	height:30px;
+      	flex:1;
+      }
+    }
+		</style>
+		<script type="text/javascript" src="../../script/jquery-3.4.1.min.js">
+		</script>
+		<script type="text/javascript">
+			$(function() {
+				var boxwidth = $('div.box').css('width');
+				var numboxwidth = boxwidth.replace('px', '');
+				console.log(numboxwidth);
+        if (numboxwidth<400) {
+				  var numItem = numboxwidth / 11;
+				  $('h1').before('<style type="text/css">.list {width: ' + boxwidth + ';display: flex;}.item {height: ' + numItem + 'px;flex: 1;}</style>');
+        }
+			})
+		</script>
+	</head>
+	<body>
+		<h1>
+			js色卡
+		</h1>
+		<p>
+			要求：色卡左上角为白色，左下角为黑色，右上角为输入的颜色，右下角亮度为0输入颜色。
+		</p>
+		<div class="form">
+			RGB--> R：
+			<input type="number" id="R">
+			G：
+			<input type="number" id="G">
+			B：
+			<input type="number" id="B">
+			<input type="button" value="GO" id="rgbGo">
+			<br/>
+			<br/>
+			HSV--> H：
+			<input type="number" value="240" id="H">
+			S：
+			<input type="number" value="100" id="S">
+			V(B)：
+			<input type="number" value="60" id="V">
+			<input type="button" value="GO" id="hsvGo">
+		</div>
+		<div id="box" class="box">
+		</div>
+		<script type="text/javascript">
+			$(function() {
+				var dom = $('#box');
+         $('#rgbGo').click(function() {
+					var R = $('#R').val() || 0;
+					var G = $('#G').val() || 0;
+					var B = $('#B').val() || 0;
+					var hsv = rgbToHsv([R, G, B]);
+           initHtml(hsv);
+				});
+         $('#hsvGo').click(function() {
+					var H = $('#H').val() || 0;
+					var S = $('#S').val() || 0;
+					var V = $('#V').val() || 0;
+           initHtml([H, S, V]);
+				});
+         initHtml([240, 100, 60]);
+				function initHtml(arr) {
+					var h = arr[0],
+					s = arr[1],
+					v = arr[2];
+					var colors = createColorList(h, s, v);
+					var domHtml = createHtml(colors);
+					dom.html($(domHtml));
+				}
+				function createHtml(colors) {
+					var html = '';
+					for (var i = 0,
+					l = colors.length; i < l; i++) {
+						html += '<div class="list">';
+						for (var x = 0,
+						n = colors[i].length; x < n; x++) {
+							html += '<div class="item" style="background:' + colors[i][x] + '"></div>';
+						}
+						html += '</div>';
+					}
+					return html;
+				}
+				//生成11*11的二维数组（颜色）要求：色卡左上角为白色，左下角为黑色，右上角为输入的颜色，右下角亮度为0输入颜色
+				function createColorList(h, n, m) {
+					var list = [];
+					for (var i = 0; i <= 10; i++) {
+						for (var y = 0; y <= 10; y++) {
+							if (y === 0) {
+								list[i] = [];
+							}
+							var s = y * (n / 10);
+							var l = 100 - (i * 10);
+							var _m = m - (m / 10 * i);
+							l = l - (y * ((l - _m) / 10));
+							var color = hsvToRgb([h, s / 100, l / 100]);
+							var item = 'rgb(' + color[0] + ',' + color[1] + ',' + color[2] + ')';
+              list[i].push(item);
+						}
+					}
+					return list;
+				}
+				//hsv颜色转rgb颜色
+				function hsvToRgb(arr) {
+					var h = arr[0],
+					s = arr[1],
+					v = arr[2];
+					var r = 0,
+					g = 0,
+					b = 0;
+					var i = parseInt((h / 60) % 6);
+					var f = h / 60 - i;
+					var p = v * (1 - s);
+					var q = v * (1 - f * s);
+					var t = v * (1 - (1 - f) * s);
+					switch (i) {
+					case 0:
+						r = v;
+						g = t;
+						b = p;
+						break;
+					case 1:
+						r = q;
+						g = v;
+						b = p;
+						break;
+					case 2:
+						r = p;
+						g = v;
+						b = t;
+						break;
+					case 3:
+						r = p;
+						g = q;
+						b = v;
+						break;
+					case 4:
+						r = t;
+						g = p;
+						b = v;
+						break;
+					case 5:
+						r = v;
+						g = p;
+						b = q;
+						break;
+					default:
+						break;
+					}
+					r = parseInt(r * 255.0);
+          g = parseInt(g * 255.0);
+          b = parseInt(b * 255.0);
+           return [r, g, b];
+				}
+				//rgb颜色转hsv颜色
+				function rgbToHsv(arr) {
+					var h = 0,
+					s = 0,
+					v = 0;
+					var r = arr[0],
+					g = arr[1],
+					b = arr[2];
+					arr.sort(function(a, b) {
+						return a - b;
+					});
+           var max = arr[2];
+					var min = arr[0];
+					v = max / 255;
+					s = max === 0 ? 0 : 1 - (min / max);
+					if (max === min) {
+						h = 0; //事实上，max===min的时候，h无论为多少都无所谓
+					} else if (max === r && g >= b) {
+						h = 60 * ((g - b) / (max - min)) + 0;
+					} else if (max === r && g < b) {
+						h = 60 * ((g - b) / (max - min)) + 360;
+					} else if (max === g) {
+						h = 60 * ((b - r) / (max - min)) + 120;
+					} else if (max === b) {
+						h = 60 * ((r - g) / (max - min)) + 240;
+					}
+					h = parseInt(h);
+					s = parseInt(s * 100);
+					v = parseInt(v * 100);
+					return [h, s, v];
+				}
+			})
+		</script>
+	</body>
+
 </html>
