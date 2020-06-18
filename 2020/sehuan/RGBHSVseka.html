@@ -5,30 +5,40 @@
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>js色卡</title>
-    <style>
-        .box { border: 1px solid rgba(0,0,0,0.2); width: 550px; margin-top: 20px;}
-        .list {width: 550px;display: flex;}
-        .item {height: 50px;flex: 1;}
-        input {width: 80px;}
+    <style type="text/css">
+        .box { border: 1px solid rgba(0,0,0,0.2); width: auto; margin-top: 20px;}
+        /*.list {width: 330px;display: flex;}
+        .item {height: 30px;flex: 1;}*/
+        input {width: 30px;}
     </style>
+
+    <script type="text/javascript" src="../../scirpt/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+    $(function(){
+      var boxwidth = $('div.box').css('width');
+      var numboxwidth = boxwidth.replace('px','');
+      console.log(numboxwidth);
+      var numItem = numboxwidth/11;
+      $('h1').before('<style type="text/css">.list {width: '+boxwidth+';display: flex;}.item {height: '+numItem+'px;flex: 1;}</style>');
+    })
+    </script>
 </head>
 <body>
     <h1>js色卡</h1>
     <p>要求：色卡左上角为白色，左下角为黑色，右上角为输入的颜色，右下角亮度为0输入颜色。</p>
     <div class="form">
-        RGB---->
+        RGB-->
         R：<input type="number" id="R">
         G：<input type="number" id="G">
         B：<input type="number" id="B">
-        <input type="button" value="GO" id="rgbGo"> <br>
-        HSV---->
+        <input type="button" value="GO" id="rgbGo"> <br/><br/>
+        HSV-->
         H：<input type="number" value="240" id="H">
         S：<input type="number" value="100" id="S">
         V(B)：<input type="number" value="60" id="V">
         <input type="button" value="GO" id="hsvGo">
     </div>
     <div id="box" class="box"></div>
-    <script type="text/javascript" src="../../script/jquery-3.4.1.min.js"></script>
     <script type="text/javascript">
         $(function () {
             var dom = $('#box')
