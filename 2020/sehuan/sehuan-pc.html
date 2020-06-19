@@ -2,106 +2,9 @@
 <head>
 <meta charset="UTF-8" />
 <title>颜色搭配自动选择器</title>
-
 <script type="text/javascript" src="../../script/jquery-3.4.1.min.js"></script>
 <script type="text/javascript" src="../../script/highcharts.js"></script>
-
-</head>
-<body>
-  <table style="width:100%;height:100%;">
-    <tr>
-      <td style="width:40%;">
-        <div id="container" style="width:100%;height:100%; margin: 0 auto"></div>
-      </td>
-      <td style="width:60%;">
-        <table class="table" id='Similarcolors'>
-          <tr>
-            <th colspan="2">同类色（15°~30°）</th>
-          </tr>
-          <tr>
-            <th class='thStyle'>1</th>
-            <td id='Similarcolorstd1' class='tdheight'></td>
-          </tr>
-        </table>
-
-        <br><br><br>
-
-        <table class="table" id='Nearcolors'>
-          <tr>
-            <th colspan="2">相似色（45°~90°）</th>
-          </tr>
-          <tr>
-            <th class='thStyle'>1</th>
-            <td id='Nearcolorstd1' class='tdheight'></td>
-          </tr>
-          <tr>
-            <th class='thStyle'>2</th>
-            <td id='Nearcolorstd2' class='tdheight'></td>
-          </tr>
-          <tr>
-            <th class='thStyle'>3</th>
-            <td id='Nearcolorstd3' class='tdheight'></td>
-          </tr>
-          <tr>
-            <th class='thStyle'>4</th>
-            <td id='Nearcolorstd4' class='tdheight'></td>
-          </tr>
-          <tr>
-            <th class='thStyle'>5</th>
-            <td id='Nearcolorstd5' class='tdheight'></td>
-          </tr>
-          <tr>
-            <th class='thStyle'>6</th>
-            <td id='Nearcolorstd6' class='tdheight'></td>
-          </tr>
-        </table>
-
-        <br><br><br>
-
-        <table class="table" id='complementaryColor'>
-          <tr>
-            <th colspan="2">互补色（180°）</th>
-          </tr>
-          <tr>
-            <th class='thStyle'>1</th>
-            <td id='complementaryColor1' class='tdheight'></td>
-          </tr>
-          <tr>
-            <th class='thStyle'>2</th>
-            <td id='complementaryColor2' class='tdheight'></td>
-          </tr>
-        </table>
-
-        <br><br><br>
-
-        <table class="table" id='Contrastingcolors'>
-          <tr>
-            <th colspan="2">对比色（120°）</th>
-          </tr>
-          <tr>
-            <th class='thStyle'>1</th>
-            <td id='Contrastingcolorstd1' class='tdheight'></td>
-          </tr>
-          <tr>
-            <th class='thStyle'>2</th>
-            <td id='Contrastingcolorstd2' class='tdheight'></td>
-          </tr>
-          <tr>
-            <th class='thStyle'>3</th>
-            <td id='Contrastingcolorstd3' class='tdheight'></td>
-          </tr>
-        </table>
-
-
-        <br><br><br>
-      </td>
-    </tr>
-  </table>
-
-
-
-<script language="JavaScript">
-
+<script type="text/javascript">
 $(document).ready(function() {
   var colorObjArray = [];
 
@@ -277,7 +180,6 @@ var colorArray=['rgb(255,21,0)','rgb(235,97,0)','rgb(243,152,0)',
 });
 </script>
 
-
 <style type="text/css">
 .table {
   width: 100%;
@@ -295,9 +197,97 @@ var colorArray=['rgb(255,21,0)','rgb(235,97,0)','rgb(243,152,0)',
   width:20%;
 }
 </style>
+</head>
+<body>
+  <table style="width:100%;height:100%;">
+    <tr>
+      <td style="width:40%;">
+        <div id="container" style="width:100%;height:100%; margin: 0 auto"></div>
+      </td>
+      <td style="width:60%;">
+        <table class="table" id='Similarcolors'>
+          <tr>
+            <th colspan="2">同类色（15°~30°）</th>
+          </tr>
+          <tr>
+            <th class='thStyle'>1</th>
+            <td id='Similarcolorstd1' class='tdheight'></td>
+          </tr>
+        </table>
 
+        <br><br><br>
 
+        <table class="table" id='Nearcolors'>
+          <tr>
+            <th colspan="2">相似色（45°~90°）</th>
+          </tr>
+          <tr>
+            <th class='thStyle'>1</th>
+            <td id='Nearcolorstd1' class='tdheight'></td>
+          </tr>
+          <tr>
+            <th class='thStyle'>2</th>
+            <td id='Nearcolorstd2' class='tdheight'></td>
+          </tr>
+          <tr>
+            <th class='thStyle'>3</th>
+            <td id='Nearcolorstd3' class='tdheight'></td>
+          </tr>
+          <tr>
+            <th class='thStyle'>4</th>
+            <td id='Nearcolorstd4' class='tdheight'></td>
+          </tr>
+          <tr>
+            <th class='thStyle'>5</th>
+            <td id='Nearcolorstd5' class='tdheight'></td>
+          </tr>
+          <tr>
+            <th class='thStyle'>6</th>
+            <td id='Nearcolorstd6' class='tdheight'></td>
+          </tr>
+        </table>
 
+        <br><br><br>
+
+        <table class="table" id='complementaryColor'>
+          <tr>
+            <th colspan="2">互补色（180°）</th>
+          </tr>
+          <tr>
+            <th class='thStyle'>1</th>
+            <td id='complementaryColor1' class='tdheight'></td>
+          </tr>
+          <tr>
+            <th class='thStyle'>2</th>
+            <td id='complementaryColor2' class='tdheight'></td>
+          </tr>
+        </table>
+
+        <br><br><br>
+
+        <table class="table" id='Contrastingcolors'>
+          <tr>
+            <th colspan="2">对比色（120°）</th>
+          </tr>
+          <tr>
+            <th class='thStyle'>1</th>
+            <td id='Contrastingcolorstd1' class='tdheight'></td>
+          </tr>
+          <tr>
+            <th class='thStyle'>2</th>
+            <td id='Contrastingcolorstd2' class='tdheight'></td>
+          </tr>
+          <tr>
+            <th class='thStyle'>3</th>
+            <td id='Contrastingcolorstd3' class='tdheight'></td>
+          </tr>
+        </table>
+
+        <br><br><br>
+
+      </td>
+    </tr>
+  </table>
 
 </body>
 </html>
