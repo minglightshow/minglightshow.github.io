@@ -10,7 +10,7 @@
 		<style type="text/css">
     /*
 		 *
-		 */
+     */
     @media screen and (max-width:768px) {
     	input {
     	 width:35px;
@@ -67,6 +67,24 @@
       	flex:1;
       }
     }
+		.small-box{
+       	border:1px solid rgb(255,0,0);
+		}
+		.table {
+		  width: 100%;
+		    border-collapse: collapse;
+		}
+
+		.table,.table td, .table th {
+		    border:1px solid #DDD;
+		}
+		.tdheight{
+		  height: 30px;
+		  width:80%;
+		}
+		.thStyle{
+		  width:20%;
+		}
 		</style>
 		<script type="text/javascript" src="../../script/jquery-3.4.1.min.js">
 		</script>
@@ -75,12 +93,22 @@
 			$(function() {
 				var boxwidth = $('div.box').css('width');
 				var numboxwidth = boxwidth.replace('px', '');
-				console.log(numboxwidth);
+
         if (numboxwidth<1200) {
 				  var numItem = numboxwidth / 11;
 				  $('h1').before('<style type="text/css">.list {width: ' + boxwidth + ';display: flex;}.item {height: ' + numItem + 'px;flex: 1;}</style>');
         }
+
 			})
+
+      var i=0;
+			function selected(object){
+        i+=1;
+				$('#colorstd'+i).css('background-color',$(object).css('background-color'));
+				if(i==3){
+					i=0;
+				}
+			}
 		</script>
 	</head>
 	<body>
@@ -142,7 +170,7 @@
 						html += '<div class="list">';
 						for (var x = 0,
 						n = colors[i].length; x < n; x++) {
-							html += '<div class="item" style="background:' + colors[i][x] + '"></div>';
+							html += '<div class="item" style="background:' + colors[i][x] + '" onClick="selected(this);"></div>';
 						}
 						html += '</div>';
 					}
@@ -251,7 +279,31 @@
 					return [h, s, v];
 				}
 			})
+
 		</script>
+
+		<br><br><br>
+
+		        <table class="table" id='colors'>
+		          <tr>
+		            <th colspan="2">颜色</th>
+		          </tr>
+		          <tr>
+		            <th class='thStyle'>1</th>
+		            <td id='colorstd1' class='tdheight'></td>
+		          </tr>
+		          <tr>
+		            <th class='thStyle'>2</th>
+		            <td id='colorstd2' class='tdheight'></td>
+		          </tr>
+		          <tr>
+		            <th class='thStyle'>3</th>
+		            <td id='colorstd3' class='tdheight'></td>
+		          </tr>
+		        </table>
+
+<br><br><br>
+
 	</body>
 
 </html>
