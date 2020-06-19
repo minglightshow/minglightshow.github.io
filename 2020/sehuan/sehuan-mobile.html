@@ -90,25 +90,20 @@ var colorArray=['rgb(255,21,0)','rgb(235,97,0)','rgb(243,152,0)',
               $('#Nearcolorstd6').css("background-color",colorObjArray[nextIndex2].color);
 
               //互补色
-              var range = getRangeByColor(event.point.color);
+              var index = getIndexByColor(event.point.color);
+              var complementaryIndex = arrayIndexCalcu(index,12);
+              var complementaryColor = colorObjArray[complementaryIndex].color;
 
-              if(range<=180){
-                var nextRange = rangeCalcu180(range);
-              }else {
-                var nextRange = rangeCalcu360(range);
-              }
-
-              var complementaryColor = getColorByRange(nextRange);
               $('#complementaryColor1').css("background-color",event.point.color);
               $('#complementaryColor2').css("background-color",complementaryColor);
 
               //对比色
-              console.log(colorObjArray);
-              var rangeArr = getContrastingColorsByRangeCalcu(range);
               $('#Contrastingcolorstd1').css("background-color",event.point.color);
-              var Contrastingcolor2 = getColorByRange(rangeArr[0]);
+              var contrastingIndex = arrayIndexCalcu(index,9);
+              var Contrastingcolor2 = colorObjArray[contrastingIndex].color;
               $('#Contrastingcolorstd2').css("background-color",Contrastingcolor2);
-              var Contrastingcolor3 = getColorByRange(rangeArr[1]);
+              contrastingIndex = arrayIndexCalcu(contrastingIndex,9);
+              var Contrastingcolor3 = colorObjArray[contrastingIndex].color;
               $('#Contrastingcolorstd3').css("background-color",Contrastingcolor3);
             }
          }
@@ -120,9 +115,9 @@ var colorArray=['rgb(255,21,0)','rgb(235,97,0)','rgb(243,152,0)',
       data: dataList
    }];
 
-      var credits = [{
-       enabled: false
-      }];
+   var credits = [{
+    enabled: false
+   }];
 
    var json = {};
    json.chart = chart;
@@ -176,31 +171,18 @@ var colorArray=['rgb(255,21,0)','rgb(235,97,0)','rgb(243,152,0)',
         }
    }
 
-//互补色角度循环计算
-//小于180°时
-function rangeCalcu180(range){
-  //range-15°+180°
-  return range-15+180;
-}
-//大于360°
-function rangeCalcu360(range){
-  //range+15°-180°
-  return range-180-15;
-}
-
-//对比色角度循环计算
-function getContrastingColorsByRangeCalcu(range){
-  var rangeArr = [];
-  //+120°
-  for (var i = 0; i < 2; i++) {
-      range+=(120);
-      if (range>360) {
-        range = range-360-15;
-      }
-      rangeArr.push(range);
-  }
-  return rangeArr;
-}
+   //数组下标计算
+   function arrayIndexCalcu(index, num) {
+   	//从开始坐标加一计算，如果数到最后一位，就归零，重新开始数；
+   	while (0 != num) {
+   		index += 1;
+   		num -= 1;
+   		if (index == colorObjArrayLength) {
+   			index = 0;
+   		}
+   	}
+   	return index;
+   }
 
 });
 </script>
